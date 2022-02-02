@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(58, 58, 58);
+}
+.player {
+    font-size: 100px;
+}
+.buttons{
+    margin: 30px;
+    align-items: center;
+    display: flex;
+}
+.choice-button {
+    width: 70px;
+    font-size: 50px;
+    margin: 5px;
+    background-color: gray;
+    border: rgb(61, 61, 61);
+    border-radius: 10px;
+}
+.choice-button:hover{
+    font-size: 60px;
+    background-color: red;
+}
+.bob{
+    font-size: 100px;
+}
+.divisor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.line {
+    height: 0;
+    border-top: 1px solid white;
+    width: 40%;
+}
