@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-Simple Rock-Paper-Scissors project using html/css/js
+Simple rock-paper-scissors project using html/css/js
