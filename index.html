@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="app.css">
+    <script src='script.js'></script>
     <title>BOB</title>
 </head>
 
@@ -14,9 +15,9 @@
     <section class="game">
         <div class="player">&#128519</div>
         <ul class="buttons">
-            <li><input type="button" class="choice-button" id="rock" value="&#x270A"></li>
-            <li><input type="button" class="choice-button" id="paper" value="&#x270B"></li>
-            <li><input type="button" class="choice-button" id="scissor" value="&#x270C"></li>
+            <li><button onclick="clicked()" class="choice-button" id="rock">&#x270A</li>
+            <li><button class="choice-button" id="paper">&#x270B</li>
+            <li><button class="choice-button" id="scissor">&#x270C</li>
         </ul>
         <div class="divisor">
             <div class="line"></div>
