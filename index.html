@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="app.css">
-    <script src='script.js'></script>
     <title>BOB</title>
 </head>
 
@@ -15,18 +14,20 @@
     <section class="game">
         <div class="player">&#128519</div>
         <ul class="buttons">
-            <li><button onclick="clicked()" class="choice-button" id="rock">&#x270A</li>
-            <li><button class="choice-button" id="paper">&#x270B</li>
-            <li><button class="choice-button" id="scissor">&#x270C</li>
+            <li><button onclick="clicked('rock')" class="choice-button" id="rock">&#x270A</li>
+            <li><button onclick="clicked('paper')" class="choice-button" id="paper">&#x270B</li>
+            <li><button onclick="clicked('scissor')" class="choice-button" id="scissor">&#x270C</li>
         </ul>
         <div class="divisor">
             <div class="line"></div>
-            <div class="score">0 - 1</div>
+            <div class="score"><span id="playerScore">0</span> - <span id="computerScore">0</span></div>
             <div class="line"></div>
         </div>
+
         <div class="bob">&#x1F479</div>
     </section>
 
+    <script src='script.js'></script>
 </body>
 
 </html>
