@@ -12,19 +12,24 @@
 
 <body>
     <section class="game">
-        <div class="player">&#128519</div>
+        <div class="bob">&#129302</div>
         <ul class="buttons">
-            <li><button onclick="clicked('rock')" class="choice-button" id="rock">&#x270A</li>
-            <li><button onclick="clicked('paper')" class="choice-button" id="paper">&#x270B</li>
-            <li><button onclick="clicked('scissor')" class="choice-button" id="scissor">&#x270C</li>
+            <li><button class="choice-button computer-choice" id='computer-rock'>&#x270A</li>
+            <li><button class="choice-button computer-choice" id='computer-paper'>&#x270B</li>
+            <li><button class="choice-button computer-choice" id='computer-scissor'>&#x270C</li>
         </ul>
         <div class="divisor">
             <div class="line"></div>
             <div class="score"><span id="playerScore">0</span> - <span id="computerScore">0</span></div>
             <div class="line"></div>
         </div>
-
-        <div class="bob">&#x1F479</div>
+        <div class="player">&#128512</div>
+        <ul class="buttons">
+            <li><button class="choice-button player-choice" id="rock">&#x270A</li>
+            <li><button class="choice-button player-choice" id="paper">&#x270B</li>
+            <li><button class="choice-button player-choice" id="scissor">&#x270C</li>
+        </ul>
+        
     </section>
 
     <script src='script.js'></script>

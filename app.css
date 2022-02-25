@@ -12,6 +12,7 @@ html, body {
 }
 .player {
     font-size: 100px;
+    margin-bottom: 30px;
 }
 .buttons{
     height: 80px;
@@ -27,18 +28,16 @@ html, body {
     border-radius: 10px;
     border: none;
 }
-.choice-button:hover{
+.player-choice:hover{
     box-shadow: 0px 2px 3px rgb(209, 195, 195);
     text-shadow: 0px 2px 3px rgb(209, 195, 195);
     font-size: 60px;
     border: 2px solid rgb(209, 195, 195);
 }
-.choice-button:target{
-    background-color: aqua;
 
-}
 .bob{
     font-size: 100px;
+    margin-bottom: 30px;
 }
 .divisor{
     display: flex;
@@ -53,4 +52,15 @@ html, body {
     height: 0;
     border-top: 1px solid white;
     width: 40%;
+}
+
+.button-active.player-choice{
+    font-size: 30px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.highlight-choice{
+    background-color: rgb(138, 51, 36);
+    border: 2px solid white;
 }

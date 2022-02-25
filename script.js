@@ -1,9 +1,22 @@
+
+// global variables
 const playerScore = document.querySelector("#playerScore")
 const computerScore = document.querySelector("#computerScore")
-function clicked(playerChoice){
+const playerChoices = document.querySelectorAll('.player-choice')
+const computerChoices = document.querySelectorAll('.computer-choice')
+
+for(let i = 0; i < playerChoices.length; i++){
+    playerChoices[i].addEventListener('click', function(){
+        doButtonAnimation(this.id);
+        playGame(this.id);
+    })
+}
+
+function playGame(choice){
+    const playerChoice = choice
     const computerChoice = getComputerChoice();
+    highlightComputerChoice(computerChoice)
     const winner = getWinner(playerChoice, computerChoice);
-    console.log(winner)
     changeScore(winner);
 }
 
@@ -24,8 +37,18 @@ function getComputerChoice(){
     return computerChoice;
 }
 
+function highlightComputerChoice(choice){
+    // remove class from last highlighted choice
+    for(let i = 0; i < computerChoices.length; i++){
+        computerChoices[i].classList.remove('highlight-choice')
+    }
+
+    const computerChoice = document.querySelector(`#computer-${choice}`)
+    computerChoice.classList.add('highlight-choice')
+    
+}
+
 function getWinner(playerChoice, computerChoice){
-    console.log(`${playerChoice}, ${computerChoice}`)
     if (playerChoice === computerChoice){
         return 'draw';
     }
@@ -48,4 +71,13 @@ function changeScore(winner){
         intComputerScore++;
         computerScore.textContent = `${intComputerScore}`
     }
+}
+
+function doButtonAnimation(choice){
+
+    const activeButton = document.querySelector(`#${choice}`)
+    activeButton.classList.add('button-active')
+    setTimeout(function(){
+        activeButton.classList.remove('button-active')
+    }, 100)
 }
